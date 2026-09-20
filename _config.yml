@@ -1,0 +1,28 @@
+title: "Documentos legales de mis apps"
+description: "Políticas de privacidad, términos y otros documentos legales de mis aplicaciones."
+url: "" # ej: https://tu-usuario.github.io  (déjalo vacío si no lo sabes aún, no es obligatorio)
+baseurl: "/legal-docs" # cámbialo si renombras el repo, o déjalo "" si usas un dominio propio o un repo tipo usuario.github.io
+
+# Nada de plugins: así GitHub Pages construye el sitio automáticamente
+# sin necesidad de GitHub Actions ni build local.
+markdown: kramdown
+kramdown:
+  input: GFM
+
+collections:
+  docs:
+    output: true
+    permalink: /apps/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

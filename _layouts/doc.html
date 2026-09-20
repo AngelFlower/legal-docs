@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="doc">
+  <p class="doc-back"><a href="{{ '/' | relative_url }}">&larr; Volver al listado</a></p>
+
+  <header class="doc-header">
+    <p class="doc-app">{{ page.app_name }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.updated %}
+      <p class="doc-updated">Última actualización: {{ page.updated }}</p>
+    {% endif %}
+  </header>
+
+  <div class="doc-content">
+    {{ content }}
+  </div>
+</article>

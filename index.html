@@ -1,0 +1,21 @@
+---
+layout: default
+title: ""
+---
+<p class="intro">Listado público de los documentos legales de mis apps (políticas de privacidad, términos de uso, eliminación de datos, etc.). Se genera automáticamente a partir de los archivos en <code>_docs/</code>.</p>
+
+{% assign grouped = site.docs | group_by: "app" %}
+{% for group in grouped %}
+  <div class="app-card">
+    <h2>{{ group.items.first.app_name }}</h2>
+    <ul>
+      {% assign items = group.items | sort: "type" %}
+      {% for doc in items %}
+        <li>
+          <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+          {% if doc.updated %}<span class="muted"> · actualizado {{ doc.updated }}</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
