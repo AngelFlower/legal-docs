@@ -1,0 +1,16 @@
+# Datos de cada app. Se escriben UNA sola vez aquí y todos sus documentos
+# (privacidad, términos, eliminación de datos, …) los leen automáticamente.
+#
+# La clave (ej. "mi-app") es el slug: debe ser igual al nombre de la carpeta
+# en _docs/ y al campo `app` del front matter de cada documento.
+#
+# Copia el bloque de ejemplo, quita los "#" y rellénalo:
+#
+# mi-app:
+#   name: "Mi App"                              # nombre tal como aparece en la tienda
+#   package_name: "com.miempresa.miapp"         # Application ID de Android
+#   developer_name: "Juan Pérez"                # persona o empresa responsable (igual que en la ficha de Google Play)
+#   developer_address: "Calle 123, Col. Centro, CDMX, México, C.P. 00000"
+#   contact_email: "privacidad@miempresa.com"
+#   jurisdiction: "los Estados Unidos Mexicanos" # se usa en "Ley aplicable" de los términos
+#   courts: "Ciudad de México"                  # tribunales competentes

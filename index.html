@@ -2,20 +2,23 @@
 layout: default
 title: ""
 ---
-<p class="intro">Listado público de los documentos legales de mis apps (políticas de privacidad, términos de uso, eliminación de datos, etc.). Se genera automáticamente a partir de los archivos en <code>_docs/</code>.</p>
+<p class="intro">Listado público de los documentos legales de mis apps (avisos de privacidad, términos de uso, eliminación de datos, etc.).</p>
 
 {% assign grouped = site.docs | group_by: "app" %}
 {% for group in grouped %}
+  {% assign app = site.data.apps[group.name] %}
   <div class="app-card">
-    <h2>{{ group.items.first.app_name }}</h2>
+    <h2>{{ app.name | default: group.name }}</h2>
     <ul>
       {% assign items = group.items | sort: "type" %}
       {% for doc in items %}
         <li>
           <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
-          {% if doc.updated %}<span class="muted"> · actualizado {{ doc.updated }}</span>{% endif %}
+          {% if doc.updated %}<span class="muted"> · actualizado el {% include fecha.html fecha=doc.updated %}</span>{% endif %}
         </li>
       {% endfor %}
     </ul>
   </div>
+{% else %}
+  <p class="muted">Todavía no hay documentos publicados.</p>
 {% endfor %}
