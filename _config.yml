@@ -1,14 +1,16 @@
 title: "Documentos legales de mis apps"
-description: "Políticas de privacidad, términos y otros documentos legales de mis aplicaciones."
-url: "" # ej: https://tu-usuario.github.io  (déjalo vacío si no lo sabes aún, no es obligatorio)
+description: "Avisos de privacidad, términos y otros documentos legales de mis aplicaciones."
+url: "" # ej: https://tu-usuario.github.io  (recomendado: permite URLs absolutas/canónicas)
 baseurl: "/legal-docs" # cámbialo si renombras el repo, o déjalo "" si usas un dominio propio o un repo tipo usuario.github.io
 
-# Nada de plugins: así GitHub Pages construye el sitio automáticamente
-# sin necesidad de GitHub Actions ni build local.
+# Solo se usa lo que GitHub Pages construye de forma nativa (sin GitHub Actions
+# ni build local). GitHub Pages también admite plugins de su lista blanca,
+# como jekyll-sitemap o jekyll-seo-tag, si más adelante se necesitan.
 markdown: kramdown
 kramdown:
   input: GFM
 
+# Cada archivo en _docs/<app>/<tipo>.md se publica en /apps/<app>/<tipo>/
 collections:
   docs:
     output: true
@@ -26,3 +28,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - scripts
+  - _templates

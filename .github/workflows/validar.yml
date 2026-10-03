@@ -1,0 +1,14 @@
+# Revisa en cada push y pull request que no se publiquen documentos incompletos.
+# No construye ni publica el sitio: de eso se sigue encargando GitHub Pages.
+name: Validar documentos
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/validar.sh

@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
+{% assign app = site.data.apps[page.app] %}
 <article class="doc">
   <p class="doc-back"><a href="{{ '/' | relative_url }}">&larr; Volver al listado</a></p>
 
   <header class="doc-header">
-    <p class="doc-app">{{ page.app_name }}</p>
+    <p class="doc-app">{{ app.name | default: page.app }}</p>
     <h1>{{ page.title }}</h1>
     {% if page.updated %}
-      <p class="doc-updated">Última actualización: {{ page.updated }}</p>
+      <p class="doc-updated">Última actualización: {% include fecha.html fecha=page.updated %}</p>
     {% endif %}
   </header>
 
