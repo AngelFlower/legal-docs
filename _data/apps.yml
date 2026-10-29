@@ -14,3 +14,12 @@
 #   contact_email: "privacidad@miempresa.com"
 #   jurisdiction: "los Estados Unidos Mexicanos" # se usa en "Ley aplicable" de los términos
 #   courts: "Ciudad de México"                  # tribunales competentes
+
+cuervos:
+  name: "Cuervos UTVT"
+  package_name: "com.cabisolutions.cuervos_app"
+  developer_name: "Cabi Solutions"
+  developer_address: "Estado de México, México"
+  contact_email: "angelfc.contact@gmail.com"
+  jurisdiction: "los Estados Unidos Mexicanos"
+  courts: "Estado de México"
