@@ -14,7 +14,11 @@ updated: 2026-10-28
 - **Cookies de sesión** que devuelve el portal. Se guardan cifradas solo en tu dispositivo y se borran al cerrar sesión.
 - **Tus calificaciones y datos académicos**. Se leen del portal y se muestran en pantalla; no se almacenan fuera de tu dispositivo.
 
-No recabamos ubicación, contactos, fotos ni identificadores de publicidad. No usamos analítica ni anuncios, y no vendemos ni compartimos tus datos.
+No recabamos ubicación, contactos ni fotos, y no vendemos tus datos.
+
+## Anuncios
+
+La App puede mostrar anuncios de terceros (por ejemplo, Google AdMob). Estos servicios pueden usar el identificador de publicidad de tu dispositivo para mostrar anuncios y medir su rendimiento, conforme a sus propias políticas. Puedes restablecer o desactivar ese identificador en los ajustes de Android. Si se agregan nuevos servicios de terceros, este aviso se actualizará.
 
 ## Versión web
 
